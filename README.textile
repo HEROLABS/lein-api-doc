@@ -1,0 +1,50 @@
+h1. The lein-api-doc plugin
+
+This plugin is a simple plugin to create some documentation for your REST style API.
+
+For some of our projects we are using a REST style API using "Clojure":http.//www.clojure.org and
+"noir":http://webnoir.org. To provide an API documentation quickly this plugin reads special Clojure meta data
+and creates some .textile files which can be easily used in the github projekt wiki.
+
+h2. Build
+
+To build the api-doc plugin you'll have to clone the git repository.
+
+@git clone git(at)github.com:PlaymakerStudio/lein-api-doc.git@
+
+Assuming that you have "Leiningen":https://github.com/technomancy/leiningen already installed. Simply execute
+
+@lein install@
+
+to install the plugin into your local plugin repository.
+
+h2. Usage
+
+To activate the plugin in you project simply add this to your `project.clj`:
+
+@:dev-dependencies [[lein-api-doc "0.1.0"]]@
+
+
+After installing the plugin it's ready to use.
+
+@lein api-doc <path-to-api-doc-root-dir>@
+
+will generate the API documentation to the specified directory root. All existing files will be replaced.
+
+
+h2. License
+
+Copyright (c) 2012 Playmaker Studio GmbH. All rights reserved.
+
+The use and distribution terms for this software are covered by the
+Eclipse Public License 1.0 (http://opensource.org/licenses/eclipse-1.0.php)
+which can be found in the file epl-v10.html at the root of this distribution.
+By using this software in any fashion, you are agreeing to be bound by
+the terms of this license.
+You must not remove this notice, or any other, from this software.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations under
+the License.
